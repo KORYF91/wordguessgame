@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>80'S HANGED MAN</title>
+    <link rel="stylesheet" href="assest/css/reset.css">
     <link rel="stylesheet" href="assest/css/style.css">
     <link rel="stylesheet" href="assest/js/style.js">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
-    
+    <!--INTRO PAGE / THIS DISPLAYS RULES AND ALLOWS THE USER TO ENTER NAME AND BEGIN-->
+    <!-- THERE WILL BE A 80'S THEMED BACK GROUND GRAPHIC AND THE BUTTONS TO PROCEED TO NEXT STAGE-->
+    <div class="Intro">
+        <header>
+        <h1> WELCOME TO THE HANGED MAN 80'S EDITION.</h1>
+        </header>
+        <!-- FONT STYLED IN 80'S HORROR THEME FONT-->
+        <h2>Intrsuctions</h2>
+           <ul>
+                <li> 1.START WITH ENTERING YOU NAME.</li> 
+                <li> 2. PICK A DIFFICULTY</li>
+                <li> 3. PICK A CATAGOREY</li>
+                <li> 4. LET THE GAME BEGIN</li>
+           </ul>
+        <h2>Rules</h2>
+        <ul>
+            <li> 1. YOU WILL HAVE THREE ROUNDS PER - CATEGORY</li>
+            <li> 2. EASY TO MEDIUM WILL ALLOW 10 GUESSES</li>
+            <li> 3. HARD WILL ALLOW 15 GUESSES</li>
+            <li> 4. IF THE USER GETS THE ANSWER CORRECT BEFORE THE NUMBER OF GUESS IS UP THE USER WINS.</li>
+            <li> 5. IF THE USER DOES NOT GET THE ANSWER BEFORE THE GUESSES RUN OUT THEY LOSE. </li>
+            <li> 6. BEST OF FIVE WINS THE CATEGORY</li>
+        </ul>
+        <!-- PROMPT USER NAME : THIS WILL BE STORED AND DISPLAYED THROUGHOUT THE ENITIRED OF THE GAME-->
+        <h3>USERNAME: </h3><br>
+        <input type="text" name="username"/>
+        <button type="button"><link type="CATEGORY" href="#">Submit</button>
+    </div>
+
+    <!--ONCE THE USER SUBMITTED THEIR NAME. THE NEXT PAGE WILL PROMPT DIFFICULTY LEVELS-->
+    <!-- THERE ONLY THREE DIFFICULTY LEVELS : EASY NORMAL HARD-->
+    <div class="difficulties_page">
+        <h1>SELECT YOUR DIFFICULTY : </h1>
+        <!--THIS WIL BE A ON-CLICK FUNCTION-->
+        <button type="button" class="btn btn-info"><link class="EASY" href="#">EASY</button>
+        <button type="button" class="btn btn-light"><link class="NORMAL" href="#">NORMAL</button>
+        <button type="button" class="btn btn-dark"><link class="HARD" href="#">HARD</button>
+    </div>
+    <!--ONCE THE DIFFICULTY IS SELECTED THE CATEGORIES PAGE WILL DISPLAY-->
+    <!--THERE ARE FOUR CATAGORIES TO CHOOSE FROM : 80'S MOVIES , MUSIC, CARS, CATCH PHRASES-->
+    <div class="categories_page">
+        <h1>SELECT YOUR CATEGORY : </h1>
+<!-- THIS WILL BE A ON-CLICK FUNCTION-->
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MOVIES</a>
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MUSIC</a>
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CATCH PHRASES</a>
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CARS</a>
+    </div>
+
+
+<!--ADDED THE CODE FOR BOOTSTRAP JS INCASE NEEDED FOR ANY DESIGN FEATURES-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
