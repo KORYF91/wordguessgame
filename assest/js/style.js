@@ -9,8 +9,30 @@ var movies = ["back to the future", "the breakfast club", "ghostbuster", "ferris
 var music = ["take on me", "don't you want me", "don't you forget about me", "come on eileen", "time after time", "karma chameleon", "hungry like the wolf", "flashdance what a feeling", "total eclipse of the heart", "i wanna dane with somebody", "sweet dreams are made of these", "sweet child o' mine", "everybody wants to rule the", "eye of the tiger", "every breathe you take", "roxanne", "girls just want to have fun", "never gonna give you up", "another one bites the dust", "wake me up before you go go", "crazy little thing called love"];
 var challenges = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-function phrase() {
-rand = math.floor(math.random()+phrases.length);
-word = phrases[rand];
-document.
+var word = null;
+var lettersinTheWord = [];
+var machedLetters = [];
+function randomWordGen() {
+    rand = Math.floor(Math.random() * phrases.length);
+    word = phrases[rand];
+    console.log("RandomWord: " + word);
+    lettersinTheWord = word.split("");
+    displayWord()
+
+}
+randomWordGen();
+
+function displayWord(){
+    var PhraseView = "";
+    for(var i=0; i<lettersinTheWord.length; i++){
+        //if the current letter has been guseed , display that letter
+        if(machedLetters.indexOf(lettersinTheWord[i]) !== -1){
+            PhraseView +=lettersinTheWord[i];
+        }
+        else{
+            wordView += "&nbsp;_&nbsp;"
+        }
+    }
+    document.querySelector(".difficulties_page").innerHTML = wordView;
+
 }
