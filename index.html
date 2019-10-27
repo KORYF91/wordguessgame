@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,27 @@
     <title>80'S HANGED MAN</title>
     <link rel="stylesheet" href="assest/css/reset.css">
     <link rel="stylesheet" href="assest/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javaScript" src="assest/js/style.js"></script>
 </head>
+
 <body>
-    
+
     <!--INTRO PAGE / THIS DISPLAYS RULES AND ALLOWS THE USER TO ENTER NAME AND BEGIN-->
     <!-- THERE WILL BE A 80'S THEMED BACK GROUND GRAPHIC AND THE BUTTONS TO PROCEED TO NEXT STAGE-->
     <div id="Intro">
         <header>
-        <h1> WELCOME TO THE HANGED MAN 80'S EDITION.</h1>
+            <h1> WELCOME TO THE HANGED MAN 80'S EDITION.</h1>
         </header>
         <!-- FONT STYLED IN 80'S HORROR THEME FONT-->
         <h2>Intrsuctions</h2>
-           <ul>
-                <li> 1.START WITH ENTERING YOU NAME.</li> 
-                <li> 2. PICK A DIFFICULTY</li>
-                <li> 3. PICK A CATAGOREY</li>
-                <li> 4. LET THE GAME BEGIN</li>
-           </ul>
+        <ul>
+            <li> 1.START WITH ENTERING YOU NAME.</li>
+            <li> 2. PICK A DIFFICULTY</li>
+            <li> 3. PICK A CATAGOREY</li>
+            <li> 4. LET THE GAME BEGIN</li>
+        </ul>
         <h2>Rules</h2>
         <ul>
             <li> 1. YOU WILL HAVE THREE ROUNDS PER - CATEGORY</li>
@@ -37,8 +40,9 @@
         </ul>
         <!-- PROMPT USER NAME : THIS WILL BE STORED AND DISPLAYED THROUGHOUT THE ENITIRED OF THE GAME-->
         <h3>USERNAME: </h3><br>
-        <input type="text" name="username"/>
-        <button type="button"><link type="CATEGORY" href="#">Submit</button>
+        <input type="text" name="username" />
+        <button type="button">
+            <link type="CATEGORY" href="#">Submit</button>
     </div>
 
     <!--ONCE THE USER SUBMITTED THEIR NAME. THE NEXT PAGE WILL PROMPT DIFFICULTY LEVELS-->
@@ -46,63 +50,69 @@
     <!-- <div class="difficulties_page">
         <h1>SELECT YOUR DIFFICULTY : </h1>
         <!--THIS WIL BE A ON-CLICK FUNCTION-->
-         <!-- <button type="button" class="btn btn-info"><link class="EASY" href="#">EASY</button>
+    <!-- <button type="button" class="btn btn-info"><link class="EASY" href="#">EASY</button>
         <button type="button" class="btn btn-light"><link class="NORMAL" href="#">NORMAL</button>
         <button type="button" class="btn btn-dark"><link class="HARD" href="#">HARD</button>
-    </div>  --> 
+    </div>  -->
     <!--ONCE THE DIFFICULTY IS SELECTED THE CATEGORIES PAGE WILL DISPLAY-->
     <!--THERE ARE FOUR CATAGORIES TO CHOOSE FROM : 80'S MOVIES , MUSIC, CARS, CATCH PHRASES-->
     <div id="categories_page">
         <h1>SELECT YOUR CATEGORY : </h1>
-<!-- THIS WILL BE A ON-CLICK FUNCTION-->
+        <!-- THIS WILL BE A ON-CLICK FUNCTION-->
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MOVIES</a>
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MUSIC</a>
-        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CATCH PHRASES</a>
+        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CATCH
+            PHRASES</a>
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CARS</a>
     </div>
 
 
 
-<div id = "game">
-    <p id="Category"></p>
-    <div id="gameContainer">
+    <div id="game">
+        <p id="Category"></p>
+        <div id="gameContainer">
+            <div id="letterBank">
+                <div id="letters">
+                    <div id="a" value="A" onkeyup="guessletter()"></div>
+                    <div id="b" value="B" onkeyup="guessletter()"></div>
+                    <div id="c" value="C" onkeyup="guessletter()"></div>
+                    <div id="d" value="D" onkeyup="guessletter()"></div>
+                    <div id="e" value="E" onkeyup="guessletter()"></div>
+                    <div id="f" value="F" onkeyup="guessletter()"></div>
+                    <div id="g" value="G" onkeyup="guessletter()"></div>
+                    <div id="h" value="H" onkeyup="guessletter()"></div>
+                    <div id="i" value="I" onkeyup="guessletter()"></div>
+                    <div id="j" value="J" onkeyup="guessletter()"></div>
+                    <div id="k" value="K" onkeyup="guessletter()"></div>
+                    <div id="l" value="L" onkeyup="guessletter()"></div>
+                    <div id="m" value="M" onkeyup="guessletter()"></div>
+                    <div id="n" value="N" onkeyup="guessletter()"></div>
+                    <div id="o" value="O" onkeyup="guessletter()"></div>
+                    <div id="p" value="P" onkeyup="guessletter()"></div>
+                    <div id="q" value="Q" onkeyup="guessletter()"></div>
+                    <div id="r" value="R" onkeyup="guessletter()"></div>
+                    <div id="s" value="S" onkeyup="guessletter()"></div>
+                    <div id="t" value="T" onkeyup="guessletter()"></div>
+                    <div id="u" value="U" onkeyup="guessletter()"></div>
+                    <div id="v" value="V" onkeyup="guessletter()"></div>
+                    <div id="w" value="W" onkeyup="guessletter()"></div>
+                    <div id="x" value="X" onkeyup="guessletter()"></div>
+                    <div id="y" value="Y" onkeyup="guessletter()"></div>
+                    <div id="z" value="Z" onkeyup="guessletter()"></div>
+                </div>
+            </div>
+            <!--ADDED THE CODE FOR BOOTSTRAP JS INCASE NEEDED FOR ANY DESIGN FEATURES-->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+            <!--connecting javaScript-->
 
-<div id="result">
-   <div id ="letters">
-    <div id="a" value="A" keyup="guessletter()"></div>
-    <div id="b" value="B" keyup="guessletter()"></div>
-    <div id="c" value="C" keyup="guessletter()"></div>
-    <div id="d" value="D" keyup="guessletter()"></div>
-    <div id="e" value="E" keyup="guessletter()"></div>
-    <div id="f" value="F" keyup="guessletter()"></div>
-    <div id="g" value="G" keyup="guessletter()"></div>
-    <div id="h" value="H" keyup="guessletter()"></div>
-    <div id="i" value="I" keyup="guessletter()"></div>
-    <div id="j" value="J" keyup="guessletter()"></div>
-    <div id="k" value="K" keyup="guessletter()"></div>
-    <div id="l" value="L" keyup="guessletter()"></div>
-    <div id="m" value="M" keyup="guessletter()"></div>
-    <div id="n" value="N" keyup="guessletter()"></div>
-    <div id="o" value="O" keyup="guessletter()"></div>
-    <div id="p" value="P" keyup="guessletter()"></div>
-    <div id="q" value="Q" keyup="guessletter()"></div>
-    <div id="r" value="R" keyup="guessletter()"></div>
-    <div id="s" value="S" keyup="guessletter()"></div>
-    <div id="t" value="T" keyup="guessletter()"></div>
-    <div id="u" value="U" keyup="guessletter()"></div>
-    <div id="v" value="V" keyup="guessletter()"></div>
-    <div id="w" value="W" keyup="guessletter()"></div>
-    <div id="x" value="X" keyup="guessletter()"></div>
-    <div id="y" value="Y" keyup="guessletter()"></div>
-    <div id="z" value="Z" keyup="guessletter()"></div>
-</div>
-</div>
-<!--ADDED THE CODE FOR BOOTSTRAP JS INCASE NEEDED FOR ANY DESIGN FEATURES-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!--connecting javaScript-->
-
-        </body>
+</body>
 
 </html>

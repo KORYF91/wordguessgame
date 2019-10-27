@@ -14,7 +14,7 @@ var matchedLetters = [];
 function randomPhrases() {
     rand = Math.floor(Math.random() * phrases.length);
     word = phrases[rand];
-    console.log("RandomWord: " + word);
+    console.log("Random Phrases: " + word);
     // lettersinTheWord = word.split("");
     // displayWord()
 
@@ -24,7 +24,7 @@ randomPhrases();
 function ranMovies() {
     rand = Math.floor(Math.random() * movies.length);
     word = movies[rand];
-    console.log("RandomWord: " + word);
+    console.log("Random Movies: " + word);
     // lettersinTheWord = word.split("");
     // displayWord()
 
@@ -34,7 +34,7 @@ ranMovies();
 function ranMusic() {
     rand = Math.floor(Math.random() * music.length);
     word = music[rand];
-    console.log("RandomWord: " + word);
+    console.log("Random Music: " + word);
     // lettersinTheWord = word.split("");
     // displayWord()
 
@@ -44,24 +44,26 @@ ranMusic();
 function ranCars() {
     rand = Math.floor(Math.random() * cars.length);
     word = cars[rand];
-    console.log("RandomWord: " + word);
+    console.log("Random Cars: " + word);
     lettersinTheWord = word.split("");
-    displayWord()
+    displayWord("80's cars")
 }
 ranCars();
 
-
+var wordView = "[]";
+var pharasView = "[]";
  function displayWord(){
      var PhraseView = "";
 for (var i=0; i<lettersinTheWord.length; i++){
 //the current letter has been guseed , display that letter
     if ("#guessletter".indexOf(lettersinTheWord[i]) !== -1)
-        phraseView +=lettersinTheWord[i];        
+        phraseView +=lettersinTheWord[i];       
    else 
            wordView += "&nbsp;_&nbsp;"
            console.log(displayWord)
        }
    }
 displayWord();
-//   document.querySelector(".difficulties_page").innerHTML = wordView;
+ document.getElementById("gameContainer").innerHTML = wordView;
 
+ document.getElementById("#gameContainer").innterHTML = splitword;
