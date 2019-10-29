@@ -1,6 +1,16 @@
 // checking to see the page is linked proper
-console.log("this is working?")
+// console.log("this is working?")
 
+var userText = document.getElementById("guess");
+
+     document.onkeyup = function(event) {
+    userText.textContent = event.key;
+  };
+ 
+ // document.onkeyup = function(event) {
+    // var userGuess = event.key;
+    //console.log("button press : "+ event);
+//};
 var rand = 0;
 var word = " ";
 var phrases = ["airhead", "oh my god you are such a ditz", "bro that wave break was so knarly", "bad to the bone", "you bimbette", "totally tubular", "eat my shorts", "gag me with a spoon", "grody to the max", "take a chill pill", "that babe is totally bodacious", "don't have a cow", "party hardy with house music", "i don't have to take this. i'm going home", "i pitty the fool", "don't make me angry you wouldn't like me when i'm angry"];
@@ -24,9 +34,9 @@ randomPhrases();
 function ranMovies() {
     rand = Math.floor(Math.random() * movies.length);
     word = movies[rand];
-    console.log("Random Movies: " + word);
-    // lettersinTheWord = word.split("");
-    // displayWord()
+    //console.log("Random Movies: " + word);
+     lettersinTheWord = word.split("");
+     displayWord("_")
 
 }
 ranMovies();
@@ -44,26 +54,38 @@ ranMusic();
 function ranCars() {
     rand = Math.floor(Math.random() * cars.length);
     word = cars[rand];
+       lettersinTheWord = word.split("");
+    document.getElementById("wrd").style.visibility = "hidden";
     console.log("Random Cars: " + word);
-    lettersinTheWord = word.split("");
-    displayWord("80's cars")
 }
 ranCars();
 
-var wordView = "[]";
-var pharasView = "[]";
- function displayWord(){
-     var PhraseView = "";
-for (var i=0; i<lettersinTheWord.length; i++){
-//the current letter has been guseed , display that letter
-    if ("#guessletter".indexOf(lettersinTheWord[i]) !== -1)
-        phraseView +=lettersinTheWord[i];       
-   else 
-           wordView += "&nbsp;_&nbsp;"
-           console.log(displayWord)
-       }
-   }
-displayWord();
- document.getElementById("gameContainer").innerHTML = wordView;
 
- document.getElementById("#gameContainer").innterHTML = splitword;
+
+// var wordView = "[]";
+// var pharasView = "[]";
+//  function displayWord(){
+//      var PhraseView = "";
+// for (var i=0; i<lettersinTheWord.length; i++){
+// //the current letter has been guseed , display that letter
+//     if ("#guessletter".indexOf(lettersinTheWord[i]) !== -1)
+//         phraseView +=lettersinTheWord[i];       
+//    else 
+//            wordView += "&nbsp;_&nbsp;"
+//            console.log(displayWord)
+//        }
+//    }
+// displayWord();
+
+
+//  document.getElementById("#gameContainer").innerHTML = wordView;
+
+//  function guessletter() {
+//     let onkeyup = document.querySelector('.guessletter')
+//     if (onkeyup) {
+//       btn.addEventListener('onkeyup', e => {
+//         document.getElementById("_" + value);
+//       })tt
+//     }
+//   }
+  

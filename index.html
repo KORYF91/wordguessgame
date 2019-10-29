@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="assest/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javaScript" src="assest/js/style.js"></script>
-</head>
+
+        
+    </head>
 
 <body>
-
+   
     <!--INTRO PAGE / THIS DISPLAYS RULES AND ALLOWS THE USER TO ENTER NAME AND BEGIN-->
     <!-- THERE WILL BE A 80'S THEMED BACK GROUND GRAPHIC AND THE BUTTONS TO PROCEED TO NEXT STAGE-->
     <div id="Intro">
@@ -44,7 +45,7 @@
         <button type="button">
             <link type="CATEGORY" href="#">Submit</button>
     </div>
-
+    
     <!--ONCE THE USER SUBMITTED THEIR NAME. THE NEXT PAGE WILL PROMPT DIFFICULTY LEVELS-->
     <!-- THERE ONLY THREE DIFFICULTY LEVELS : EASY NORMAL HARD-->
     <!-- <div class="difficulties_page">
@@ -65,42 +66,17 @@
             PHRASES</a>
         <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CARS</a>
     </div>
-
-
-
+    
+    <h2>USERS GUESS <span id="guess"><strong> </strong></span></h2>
+    <h1>Word to guess...<span id="wrd"> </span></h1>
     <div id="game">
         <p id="Category"></p>
-        <div id="gameContainer">
-            <div id="letterBank">
-                <div id="letters">
-                    <div id="a" value="A" onkeyup="guessletter()"></div>
-                    <div id="b" value="B" onkeyup="guessletter()"></div>
-                    <div id="c" value="C" onkeyup="guessletter()"></div>
-                    <div id="d" value="D" onkeyup="guessletter()"></div>
-                    <div id="e" value="E" onkeyup="guessletter()"></div>
-                    <div id="f" value="F" onkeyup="guessletter()"></div>
-                    <div id="g" value="G" onkeyup="guessletter()"></div>
-                    <div id="h" value="H" onkeyup="guessletter()"></div>
-                    <div id="i" value="I" onkeyup="guessletter()"></div>
-                    <div id="j" value="J" onkeyup="guessletter()"></div>
-                    <div id="k" value="K" onkeyup="guessletter()"></div>
-                    <div id="l" value="L" onkeyup="guessletter()"></div>
-                    <div id="m" value="M" onkeyup="guessletter()"></div>
-                    <div id="n" value="N" onkeyup="guessletter()"></div>
-                    <div id="o" value="O" onkeyup="guessletter()"></div>
-                    <div id="p" value="P" onkeyup="guessletter()"></div>
-                    <div id="q" value="Q" onkeyup="guessletter()"></div>
-                    <div id="r" value="R" onkeyup="guessletter()"></div>
-                    <div id="s" value="S" onkeyup="guessletter()"></div>
-                    <div id="t" value="T" onkeyup="guessletter()"></div>
-                    <div id="u" value="U" onkeyup="guessletter()"></div>
-                    <div id="v" value="V" onkeyup="guessletter()"></div>
-                    <div id="w" value="W" onkeyup="guessletter()"></div>
-                    <div id="x" value="X" onkeyup="guessletter()"></div>
-                    <div id="y" value="Y" onkeyup="guessletter()"></div>
-                    <div id="z" value="Z" onkeyup="guessletter()"></div>
-                </div>
-            </div>
+        <div id="gameContainer"></div>
+        </div>
+        
+        
+            <script type="text/javaScript" src="assest/js/style.js"></script>
+      
             <!--ADDED THE CODE FOR BOOTSTRAP JS INCASE NEEDED FOR ANY DESIGN FEATURES-->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -114,5 +90,4 @@
             <!--connecting javaScript-->
 
 </body>
-
 </html>
