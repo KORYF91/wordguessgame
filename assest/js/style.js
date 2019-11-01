@@ -1,15 +1,11 @@
 // checking to see the page is linked proper
 // console.log("this is working?")
 
-var userText = document.getElementById("guess");
 
-     document.onkeyup = function(event) {
-    userText.textContent = event.key;
-  };
- 
- // document.onkeyup = function(event) {
-    // var userGuess = event.key;
-    //console.log("button press : "+ event);
+
+// document.onkeyup = function(event) {
+// var userGuess = event.key;
+//console.log("button press : "+ event);
 //};
 var rand = 0;
 var word = " ";
@@ -20,72 +16,112 @@ var music = ["take on me", "don't you want me", "don't you forget about me", "co
 // var word = null;
 var lettersinTheWord = [];
 var matchedLetters = [];
+var totalGuess;
+var guessLeft;
 
 function randomPhrases() {
-    rand = Math.floor(Math.random() * phrases.length);
-    word = phrases[rand];
-    console.log("Random Phrases: " + word);
-    // lettersinTheWord = word.split("");
-    // displayWord()
+  rand = Math.floor(Math.random() * phrases.length);
+  word = phrases[rand];
+  console.log("Random Phrases: " + word);
+  // lettersinTheWord = word.split("");
+  // displayWord()
 
 }
 randomPhrases();
 
 function ranMovies() {
-    rand = Math.floor(Math.random() * movies.length);
-    word = movies[rand];
-    //console.log("Random Movies: " + word);
-     lettersinTheWord = word.split("");
-     displayWord("_")
+  rand = Math.floor(Math.random() * movies.length);
+  word = movies[rand];
+  console.log("Random Movies: " + word);
+  //  lettersinTheWord = word.split("");
+  //  displayWord("_")
 
 }
 ranMovies();
 
 function ranMusic() {
-    rand = Math.floor(Math.random() * music.length);
-    word = music[rand];
-    console.log("Random Music: " + word);
-    // lettersinTheWord = word.split("");
-    // displayWord()
+  rand = Math.floor(Math.random() * music.length);
+  word = music[rand];
+  console.log("Random Music: " + word);
+  // lettersinTheWord = word.split("");
+  // displayWord()
 
 }
 ranMusic();
 
 function ranCars() {
-    rand = Math.floor(Math.random() * cars.length);
-    word = cars[rand];
-       lettersinTheWord = word.split("");
-    document.getElementById("wrd").style.visibility = "hidden";
-    console.log("Random Cars: " + word);
+  rand = Math.floor(Math.random() * cars.length);
+  word = cars[rand];
+  console.log("Random Cars: " + word);
+  lettersinTheWord = word.split("");
 }
 ranCars();
 
+var wordView = "[]";
+var pharasView = "[]";
+function displayWord() {
+  var phraseView = "";
+  for (var i = 0; i < lettersinTheWord.length; i++) {
+    //the current letter has been guseed , display that letter
+    if ("#guessletter".indexOf(lettersinTheWord[i]) !== -1)
+      phraseView += lettersinTheWord[i];
+    else
+      wordView += "&nbsp;_&nbsp;"
+    console.log(displayWord)
+  }
+};
+displayWord();
 
 
-// var wordView = "[]";
-// var pharasView = "[]";
-//  function displayWord(){
-//      var PhraseView = "";
-// for (var i=0; i<lettersinTheWord.length; i++){
-// //the current letter has been guseed , display that letter
-//     if ("#guessletter".indexOf(lettersinTheWord[i]) !== -1)
-//         phraseView +=lettersinTheWord[i];       
-//    else 
-//            wordView += "&nbsp;_&nbsp;"
-//            console.log(displayWord)
-//        }
-//    }
-// displayWord();
+// document.getElementById("#gameContainer").innerHTML = wordView;
 
+function guessletter() {
+  let onkeyup = document.querySelector('.guessletter')
+  if (onkeyup) {
+    btn.addEventListener('onkeyup')
+    document.getElementById("wrd" + value);
 
-//  document.getElementById("#gameContainer").innerHTML = wordView;
+  }
+}
 
-//  function guessletter() {
-//     let onkeyup = document.querySelector('.guessletter')
-//     if (onkeyup) {
-//       btn.addEventListener('onkeyup', e => {
-//         document.getElementById("_" + value);
-//       })tt
-//     }
-//   }
-  
+var userText = document.getElementById("guess");
+
+ document.onkeyup = function(event) {
+  userText.textContent = event.key;
+  updatePage(event.key)
+};
+
+function updatePage(letter){
+  console.log("user guess: " +letter);
+
+}
+function updateTotalGuess(){
+  totalGuess = 10;
+  guessLeft = totalGuess;
+  document.querySelector("#guess-left").innerHTML = guessLeft;
+
+}
+function starterFunction(){
+ 
+
+}
+//var btnCat = document.getElementsByClassName(btnCat);
+document.querySelector(".btnCat").addEventListener("click", selectCat );
+function selectCat(){
+  console.log("inside on click fun")
+  var cat =  document.querySelector(".btnCat").getAttribute("data-name");
+  console.log("cat user selected: " +cat);
+  if(cat === "movies"){
+    ranMovies();
+  }
+  else if(cat === "music"){
+    ranMusic();
+  }
+  else if(cat === "catch"){
+    randomPhrases()
+  }
+  else{
+    ranCars();
+  }
+}; 
+// selectCat();

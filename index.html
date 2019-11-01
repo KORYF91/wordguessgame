@@ -60,15 +60,15 @@
     <div id="categories_page">
         <h1>SELECT YOUR CATEGORY : </h1>
         <!-- THIS WILL BE A ON-CLICK FUNCTION-->
-        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MOVIES</a>
-        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">MUSIC</a>
-        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CATCH
-            PHRASES</a>
-        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">CARS</a>
+        <button class="btnCat btn btn-primary btn-lg disabled" type="button"  aria-disabled="true" data-name="movies" onclick="selectCat()">MOVIES</button>
+        <button class="btnCat btn btn-primary btn-lg disabled" type="button" aria-disabled="true" data-name="music" onclick="selectCat()">MUSIC</button>
+        <button class="btnCat btn btn-primary btn-lg disabled" type="button" aria-disabled="true" data-name="catch" onclick="selectCat()">CATCH PHRASES</button>
+        <button class="btnCat btn btn-primary btn-lg disabled" type="button" aria-disabled="true" data-name="cars" onclick="selectCat()">CARS</button>
     </div>
     
     <h2>USERS GUESS <span id="guess"><strong> </strong></span></h2>
     <h1>Word to guess...<span id="wrd"> </span></h1>
+    <h3>Guess Remaning: <span id="guess-left">10</span></h3>
     <div id="game">
         <p id="Category"></p>
         <div id="gameContainer"></div>
